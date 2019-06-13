@@ -1,0 +1,284 @@
+Diseases,Symptoms
+Pneumonia,Cough
+Pneumonia,Chest pain
+Pneumonia,Confusion or changes in mental awareness
+Pneumonia,Fatigue(extreme tiredness)
+Pneumonia,Fever
+Pneumonia,Sweating
+Pneumonia,Chills(a feeling of coldness)
+Pneumonia,Lower than normal body temperature
+Pneumonia,Nausea and vomiting
+Pneumonia,Shortness of breath
+Pneumonia1,Cough
+Pneumonia1,Chest pain
+Pneumonia1,Confusion or changes in mental awareness
+Pneumonia1,Fatigue(extreme tiredness)
+Pneumonia1,Fever
+Pneumonia1,Sweating
+Pneumonia1,Chills(a feeling of coldness)
+Pneumonia1,Lower than normal body temperature
+Pneumonia1,Nausea and vomiting
+Pneumonia1,Shortness of breath
+Dengue fever,Headache
+Dengue fever,Joint pain
+Dengue fever,Muscle pain
+Dengue fever,Nausea and vomiting
+Dengue fever,Pain behind the eyes
+Dengue fever,Swollen glands
+Dengue fever,Rash(a lot of small red spots on the skin)
+Dengue fever,Fatigue(extreme tiredness)
+Dengue fever,Persistent vomiting
+Malaria,Fever
+Malaria,Chills(a feeling of coldness)
+Malaria,Headache
+Malaria,Nausea and vomiting
+Malaria,Fatigue(extreme tiredness)
+Malaria,Muscle pain
+Malaria,Sweating
+Malaria,Chest pain
+Malaria,Cough
+Typhoid fever,Fever
+Typhoid fever,Headache
+Typhoid fever,Weakness
+Typhoid fever,Fatigue(extreme tiredness)
+Typhoid fever,Muscle pain
+Typhoid fever,Sweating
+Typhoid fever,Dry cough
+Typhoid fever,Loss of appetite and weight loss
+Typhoid fever,Diarrhea or constipation
+Typhoid fever,Extremely swollen abdomen
+Typhoid fever,Rash(a lot of small red spots on the skin)
+Tuberculosis,Coughing up blood
+Tuberculosis,Coughing that lasts three or more weeks
+Tuberculosis,Chest pain
+Tuberculosis,Unintentional weight loss
+Tuberculosis,Fever
+Tuberculosis,Fatigue(extreme tiredness)
+Tuberculosis,Chills(a feeling of coldness)
+Tuberculosis,Night sweats
+Tuberculosis,Loss of appetite
+Autoimmune hepatitis,Fatigue(extreme tiredness)
+Autoimmune hepatitis,Abdominal discomfort
+Autoimmune hepatitis,Yellowing of the skin and whites of the eyes
+Autoimmune hepatitis,An enlarged liver
+Autoimmune hepatitis,Joint pain
+Autoimmune hepatitis,Loss of menstrual periods
+Autoimmune hepatitis,Rash(a lot of small red spots on the skin)
+Autoimmune hepatitis,Abnormal blood vessels on the skin
+Brucellosis,Fever
+Brucellosis,Chills(a feeling of coldness)
+Brucellosis,Loss of appetite
+Brucellosis,Sweating
+Brucellosis,Weakness
+Brucellosis,Fatigue(extreme tiredness)
+Brucellosis,Muscle pain
+Brucellosis,Joint pain
+Brucellosis,Back pain
+Brucellosis,Headache
+Influenza (flu),Fever
+Influenza (flu),Sweating
+Influenza (flu),Chills(a feeling of coldness)
+Influenza (flu),Headache
+Influenza (flu),Dry cough
+Influenza (flu),Weakness
+Influenza (flu),Persistent cough
+Influenza (flu),Fatigue(extreme tiredness)
+Influenza (flu),Sore throat
+Influenza (flu),Dry cough
+Influenza (flu),Nasal congestion(blockage of the nasal passages)
+Ascariasis,Persistent cough
+Ascariasis,Shortness of breath
+Ascariasis,Nausea and vomiting
+Ascariasis,Diarrhea or bloody stools
+Ascariasis,Wheezing(whistling sound during breathing)
+Ascariasis,Fatigue(extreme tiredness)
+Ascariasis,Weight loss
+Ascariasis,A worm in your vomit or stool
+Chickenpox,Fever
+Chickenpox,Loss of appetite
+Chickenpox,Headache
+Chickenpox,Tiredness and a general feeling of being unwell
+Chickenpox,Raised pink or red bumps (papules)-which break out over several days
+Chikungunya,Fever
+Chikungunya,Joint pain
+Chikungunya,Muscle pain
+Chikungunya,Headache
+Chikungunya,Nausea and vomiting
+Chikungunya,Rash(a lot of small red spots on the skin)
+Chikungunya,Sore throat
+Chikungunya,Painful abdominal cramps
+Chikungunya,Cold fingers and toes
+Chikungunya,Diarrhea or constipation
+AIDS,Fever
+AIDS,Headache
+AIDS,Muscle pain
+AIDS,Joint pain
+AIDS,Rash(a lot of small red spots on the skin)
+AIDS,Sore throat
+AIDS,Painful mouth sores
+AIDS,Swollen lymph glands(mainly on the neck)
+AIDS,Fatigue(extreme tiredness)
+AIDS,Diarrhea or constipation
+AIDS,Weight loss
+AIDS,Oral yeast infection
+Anemia,Fatigue(extreme tiredness)
+Anemia,Weakness
+Anemia,Pale or yellowish skin
+Anemia,Irregular heartbeats
+Anemia,Shortness of breath
+Anemia,Dizziness
+Anemia,Chest pain
+Anemia,Cold hands and feet
+Anemia,Headache
+Anthrax,Nausea and vomiting
+Anthrax,Chest pain
+Anthrax,Headache
+Anthrax,Loss of appetite
+Anthrax,Fever
+Anthrax,Sore throat
+Anthrax,Difficulty  in swallowing
+Anthrax,Swollen neck
+Anthrax,Shortness of breath
+Anthrax,Coughing up blood
+Anthrax,Abdominal discomfort
+Diabetes,Increased thirst(feel thirsty)
+Diabetes,Frequent urination
+Diabetes,Extreme hunger
+Diabetes,Weight loss
+Diabetes,Fatigue(extreme tiredness)
+Diabetes,Blurred vision
+Diabetes,Slow-healing sores
+Diabetes,Frequent infections
+Diabetes,Irritation
+Diphtheria,Sore throat
+Diphtheria,Swollen glands
+Diphtheria,Difficulty breathing or rapid breathing
+Diphtheria,Nasal discharge(mucus comes out of nose)
+Diphtheria,Fever
+Diphtheria,Chills(a feeling of coldness)
+Diphtheria,Malaise(feeling of discomfort or illness)
+Encephalitis,Headache
+Encephalitis,Fever
+Encephalitis,Muscle pain
+Encephalitis,Joint pain
+Encephalitis,Fatigue(extreme tiredness)
+Encephalitis,Weakness
+Encephalitis,Loss of sensation
+Encephalitis,Problems with speech or hearing
+Encephalitis,Loss of consciousness
+Encephalitis,Hallucinations
+Encephalitis,Nausea and vomiting
+Encephalitis,Partial paralysis
+Encephalitis,Irritation
+Encephalitis,Poor feeding
+Rabies,Fever
+Rabies,Headache
+Rabies,Nausea and vomiting
+Rabies,Agitation(increased tension)
+Rabies,Confusion
+Rabies,Hyperactivity
+Rabies,Difficulty  in swallowing
+Rabies,Excessive salivation
+Rabies,Fear of water
+Rabies,Hallucinations
+Rabies,Partial paralysis
+Smallpox,Fever
+Smallpox,Overall discomfort
+Smallpox,Headache
+Smallpox,Fatigue(extreme tiredness)
+Smallpox,Back pain
+Smallpox,Vomiting
+Tetanus,Stiffness in your jaw muscles
+Tetanus,Stiffness of your neck muscles
+Tetanus,Difficulty  in swallowing
+Tetanus,Fever
+Tetanus,Sweating
+Tetanus,Elevated blood pressure
+Whooping cough,Runny nose
+Whooping cough,Nasal congestion(blockage of the nasal passages)
+Whooping cough,Red and watery eyes
+Whooping cough,Fever
+Whooping cough,Cough
+Whooping cough,Vomiting
+Whooping cough,Fatigue(extreme tiredness)
+Whooping cough,Red or blue face
+Plague,Fever
+Plague,Chills(a feeling of coldness)
+Plague,Headache
+Plague,Fatigue(extreme tiredness)
+Plague,Malaise(feeling of discomfort or illness)
+Plague,Muscle pain
+Plague,Weakness
+Plague,Chest pain
+Plague,Vomiting
+Plague,Diarrhea or constipation
+Plague,Bleeding from your mouth
+Plague,Difficulty breathing
+Plague,Nausea and vomiting
+Leukemia,Fever
+Leukemia,Chills(a feeling of coldness)
+Leukemia,Weakness
+Leukemia,Persistent fatigue
+Leukemia,Weight loss
+Leukemia,An enlarged liver
+Leukemia,Swollen lymph nodes
+Leukemia,Easy bleeding
+Leukemia,Rash(a lot of small red spots on the skin)
+Leukemia,Joint pain
+Leukemia,Sweating
+Alzheimer's disease,Depression
+Alzheimer's disease,Social withdrawal
+Alzheimer's disease,Mood swings(change of mood)
+Alzheimer's disease,Distrust in others
+Alzheimer's disease,Irritation
+Alzheimer's disease,Aggressiveness
+Alzheimer's disease,Changes in sleeping habits
+Alzheimer's disease,Loss of inhibitions
+Alzheimer's disease,Delusions(belief in something that is not true)
+Asthma,Shortness of breath
+Asthma,Chest pain
+Asthma,Trouble in sleeping 
+Asthma,Wheezing(whistling sound during breathing)
+Asthma,Coughing up blood
+Asthma,Difficulty breathing or rapid breathing
+Hemophilia,Unexplained and excessive bleeding from injuries
+Hemophilia,Unusual bleeding after vaccinations
+Hemophilia,Nosebleeds without a known cause
+Hemophilia,In infants-unexplained irritability
+Hemophilia,Blood in your urine or stool
+Hemophilia,Joint pain
+Hemophilia,Many large or deep bruises
+Hemophilia,Double vision
+Heart attack,Squeezing or aching sensation in your chest
+Heart attack,Nausea and vomiting
+Heart attack,Shortness of breath
+Heart attack,Indigestion
+Heart attack,Chest pain
+Heart attack,Fatigue(extreme tiredness)
+Heart attack,Lightheadedness or sudden dizziness
+Heart attack,Cold sweat
+Chronic kidney disease,Nausea and vomiting
+Chronic kidney disease,Loss of appetite
+Chronic kidney disease,Weakness
+Chronic kidney disease,Fatigue(extreme tiredness)
+Chronic kidney disease,Sleep problems
+Chronic kidney disease,Decreased mental sharpness
+Chronic kidney disease,Muscle twitches and cramps
+Chronic kidney disease,Swelling of feet and ankles
+Chronic kidney disease,Persistent itching
+Chronic kidney disease,Chest pain
+Chronic kidney disease,Shortness of breath
+Chronic kidney disease,High blood pressure (hypertension) 
+Glaucoma,Eye pain
+Glaucoma,Headache
+Glaucoma,Nausea and vomiting
+Glaucoma,Blurred vision
+Glaucoma,Eye redness
+Glaucoma,Patchy blind spots in both eyes
+Schizophrenia,Delusions(belief in something that is not true)
+Schizophrenia,Hallucinations
+Schizophrenia,Disorganized thinking (speech)
+Schizophrenia,Withdrawal from friends and family
+Schizophrenia,Trouble in sleeping 
+Schizophrenia,Irritation
+Schizophrenia,Lack of motivation
