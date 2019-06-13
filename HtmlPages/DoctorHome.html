@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Blank Page</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+
+
+    <style type="text/css">
+      tab1 { padding-left: 45em; }
+  </style>
+
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+      <!--<a class="navbar-brand mr-1" href="#">Start Bootstrap</a>-->
+      <h3 class="navbar-brand ">Welcome, Dr. {{request.session.dnm}}</h3>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Search -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a><tab1></a>
+                  </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'doctorhome' %}">Home</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'doctorprofile' %}">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'doctoradddisease' %}">Add Disease</a>
+                      </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'doctorchangepassword' %}">Change Password</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'doctoractivity' %}">Activity Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'doctorlogin' %}">Logout</a>
+          </li>
+         </ul>
+         </div>
+    </nav>
+    <br><br><br>    
+    <div class="container-fluid">
+      <!-- DataTables Example -->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-table"></i>
+          Appointment Table</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Appointment Date</th>
+                  <th>Patient Name</th>
+                  <th>Predicted disease</th>
+                  <th>Symptoms</th>
+                  <th>Contact information</th>
+                  <th>Appointment Conformation</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Appointment Date</th>
+                  <th>Patient Name</th>
+                  <th>Predicted disease</th>
+                  <th>Symptoms</th>
+                  <th>Contact information</th>
+                  <th>Appointment Conformation</th>
+                </tr>
+              </tfoot>
+              <tbody>
+               {% for i in datalist %}
+                <tr>
+                  <td>{{i.0}}</td>
+                  <td>{{i.1}}</td>
+                  <td>{{i.2}}</td>
+                  <td>{{i.6}}<br>{{i.7}}<br>{{i.8}}<br>{{i.9}}<br>{{i.10}}<br>{{i.11}}<br>{{i.12}}<br>{{i.13}}<br>{{i.14}}<br>{{i.15}}<br></td>
+                  <td><b>Mobile :</b> {{i.3}}<br><br><b>Email :</b> {{i.4}}</td>
+                  <td><a href="patienttreated/?id={{i.5}}">Treated</a> <br><br><a href="patientdelete/?id={{i.5}}">Delete</a></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+    
+
+    
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright © Your Website 2019</span>
+            </div>
+          </div>
+        </footer>
+
+      
+
+    
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    
+    <!-- Bootstrap core JavaScript-->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/static/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+<script src="/static/vendor/datatables/jquery.dataTables.js"></script>
+<script src="/static/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/static/js/sb-admin-2.min.js"></script>
+
+<!-- Demo scripts for this page-->
+<script src="/static/js/demo/datatables-demo.js"></script>
+
+  </body>
+
+</html>

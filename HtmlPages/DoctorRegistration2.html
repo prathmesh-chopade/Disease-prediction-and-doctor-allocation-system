@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Register</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <style type="text/css">
+      tab1 { padding-left: 60em; }
+  </style>
+
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="{% url 'home' %}">Welcome , Digital Hospital</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a><tab1></a>
+              </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'home' %}">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/login/?next=/admin/">Admin</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'doctorlogin' %}">Doctor <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'patientlogin' %}">Patient </a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <br><br><br>
+  </header>
+  
+  <body >
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Register an Account</div>
+        <div class="card-body">
+          <form method='POST' action="{% url 'exdreg' %}"  enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group" >
+                <input  type="file" name="file" id="file">
+            </div>
+
+            <div class="form-group">
+                <div class="form-label-group" placeholder="Education" required="required">
+                <select name="edu" class="form-control" id="edu">
+                  <option>Choose education</option>
+                  <option value="mbbs">MBBS(Bachelor of Medicine and Bachelor of Surgery)</option>
+                  <option value="bams">BAMS(Bachelor of Homeopathic Medicine & Surgery)</option>
+                  <option value="bds">BDS(Bachelor of Dental Sciences)</option>
+                  <option value="bhms">BHMS(Bachelor of Homeopathic Medicine & Surgery)</option>
+                  <option value="dhms">DHMS(Diploma in Homeopathic Medicine & Surgery)</option>
+                  <option value="md">MD(Doctor of Medicine)</option>
+                  <option value="ms">MS(Masters of Surgery)</option>
+                </select>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group" placeholder="Speciality" required="required">
+            <select name="spe" class="form-control">
+                <option value="None">Choose Speciality</option>
+                {% for disease in diseases %}
+              <option value="{{disease}}">{{disease}}</option>
+                      {% endfor %}
+            </select>
+          </div>
+      </div>
+          
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="number" id="address" name="exp" class="form-control" placeholder="Year's of Experience" required="required">
+                <label for="address">Year's of Experience</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group" placeholder="Education" required="required">
+              <select name="question" class="form-control">
+                  <option>Select security question</option>
+                <option value="who is your childhood friend?">Who is your childhood friend?</option>
+                <option value="which is your dream city?">Which is your dream city?</option>
+                <option value="which color do you like most?">Which color do you like most?</option>
+                <option value="which is your favorite fruit?">Which is your favorite fruit?</option>
+                <option value="which car do you like most?">Which car do you like most?</option>
+                <option value="who is your first love?">Who is your first love?</option>
+                <option value="which is your favorite movie?">which is your favorite movie?</option>
+                <option value="who is your favorite actor/actress?/">Who is your favorite actor/actress?</option>
+              </select>
+            </div>
+        </div>
+        <div class="form-group">
+          <div class="form-label-group">
+            <input type="text" id="answer" name="answer" class="form-control" placeholder="Answer" required="required">
+            <label for="answer">Answer</label>
+          </div>
+        </div>
+            <div class="text-center">
+              <input class="btn btn-primary text-center" type="submit" value="Register"/>
+            </div>
+            <h5 class="text-success text-center">{{ success }}</h5>
+            <h5 class='text-danger text-center'>{{ error }}</h5>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/upload-image.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  </body>
+
+</html>

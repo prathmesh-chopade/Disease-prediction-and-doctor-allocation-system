@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Blank Page</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+    <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
+    <style>
+        tab1 { padding-left:48em}
+      </style>
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <h3 class="navbar-brand mr-1">Welcome , {{ request.session.pnm }}</h3>
+      <!-- Navbar Search -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a><tab1></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'patienthome' %}">Home</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'patientappointment' %}">My Appointments</a>
+                      </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'patientchangepassword' %}">Change Password</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'patientactivity' %}">Activity Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'patientlogin' %}">Logout</a>
+          </li>
+         </ul>
+         </div>
+    </nav>
+    <br><br><br>
+    
+    <div class="container">
+        
+      <div class="card-header text-center" id="sss">Patient Symptoms </div><br>
+      <div>
+        
+        <h5 style="color:red" class="text-center" {{mes}}>We are not able to predict the disease <br>Please give us another symptom</h5>
+        <h4 style="color:green" class="text-center" {{error1}}>The  predicted disease is {{disease}}</h4>
+      </div>
+      <div class="card-body">
+          <div class="form-group">
+            <div class="form-label-group text-center">
+                      <select class="btn btn-secondary dropdown-toggle" id="dropdown1" name="dropdown1" {{error}}>
+                      
+                      {% for symptom in symptoms %}
+                      <option value="{{symptom}}" id="{{symptom}}">{{symptom}}</option>
+                      {% endfor %}
+                    </select>
+                    </div>
+                  </div>
+                <div class="text-left" id="value3">
+                  <h5 id="header" style="display:none;color:blue" {{error}}>Selected Symptoms are : </h5>
+                <div id="output" {{error}}></div>
+              </div>
+              <!-- <div style="display:none" class="text-center" id="noneofthese">
+                  <input type="button" class="btn btn-primary text-center" id="noneof" onclick="sendData()" value="These are my symptoms"/>
+              </div><br> -->
+              <form method='POST' action="{% url 'predictdisease' %}">
+                {% csrf_token %}
+              <input type="text" id="input_text1" name="symptom" value="{{initilize}}" hidden>
+              <input type="text" id="input_text2" value="{{init}}" hidden>
+              <input type="number" id="input_text3" name="number" value="{{no}}" hidden>
+              <div id="Disease"></div>
+            <div class="text-center" style="display:none" id="button-submit">
+                <input class="btn btn-primary text-center" id="noneof" type="submit" value="These are my symptoms"/>
+            </div>
+          </form><br>
+          <p class="text-center" id="did" style="display:none">Please click above button if you don't have any other symptom</p>
+          <h3  {{error1}}>Suggested Doctors : </h3>
+          
+          {% for doctor in doc_list %}
+          {% for x, y in doctor.items %}
+          <div id="profile">
+          <h6>{{x}} : {{y}} </h6>
+          {% endfor %}
+          </div>
+          <br><br>
+          {% endfor %}    
+          <div class="container">
+    <div>
+            <div class="card-header text-center" {{error1}}>Patient Appointment  </div>
+<br><br>
+         <form id="ajax_appointment" >
+            {%csrf_token%}
+      <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <div class="form-label-group">
+                  <div class="form-label-group" placeholder="Select doctor">
+                      <select name="doc" id="doc" class="form-control" id="doc" {{error1}} required="required">
+                        <option>Choose doctor</option>
+                        {% for doctor in doctorappoint %}
+                        {% for id,name in doctor.items %}
+                        <option value="{{id}}">{{name}}</option>
+                        {% endfor %}
+                        {% endfor %}
+                      </select>
+                    </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-label-group" {{error1}}>
+                  <input id="datepicker" name="date" type="text" placeholder="Date" required="required" >
+                  <script>
+                      var datepicker = new ej.calendars.DatePicker({ width: "255px" });
+                      datepicker.appendTo('#datepicker');
+                  </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary " value="appointment" {{error1}}>Take appointment</button>
+          </div>
+          
+        </form>
+        </div>
+    
+  </div>
+      </div>
+    <!-- Sticky Footer -->
+    <footer class="sticky-footer">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright © Your Website 2018</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+<script>
+val=$('#input_text3').val();
+counter1=parseInt(val)
+counter=0
+sym=$('#input_text1').val();
+symptom=$('#input_text2').val();
+vari=""
+
+function sendData(){
+
+    // $('#value3').hide()
+    
+}
+
+$('#dropdown1').change(function(e){
+e.preventDefault();
+value=$('#dropdown1').val();
+vari=vari+"&"+value
+sym=sym+"&"+value
+counter1+=1
+document.getElementById("input_text1").value=sym
+document.getElementById("input_text3").value=counter1
+if(counter1>2){
+$('#value2').show() 
+$('#dropdown1').show()
+$('#button-submit').show()
+$('#did').show()
+}
+$('#header').show()
+if(value=="none"){no=0}
+else{
+counter+=1
+$('#output').append('<h6 style="color:green">'+counter+') '+value+'</h6>')
+}
+$.ajax({
+type:'POST',
+url:'/Dropdownlist/',
+data:{
+  sy:vari,
+  count:counter1,
+  sym:symptom,
+  csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+},
+success:function(data){
+  if(data=="Yes")
+  {
+    document.getElementById("input_text1").value=sym
+    // $('#value3').hide()
+    $('#value2').show() 
+    $('#dropdown1').show()
+    // $('#Disease').append('')
+    $('#button-submit').show()
+  }
+  else{
+  $('#dropdown1').empty();
+  $('#dropdown1').append('<option>Select another Symptom</option>')
+  data=jQuery.parseJSON(data)
+  $.each(data,function(k,v){
+    $('#dropdown1').append('<option value="'+v.Symptom+'">'+v.Symptom+'</option>')
+  })
+  }
+}
+})
+})
+
+$(document).on('submit','#ajax_appointment',function(e){
+e.preventDefault();
+$.ajax({
+type:'POST',
+url:'/takeappointment/',
+data:{
+  doc:$('#doc').val(),
+  date:$('#datepicker').val(),
+  csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+},
+success:function(data){
+  alert(data)
+}
+})
+})
+
+</script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/static/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
